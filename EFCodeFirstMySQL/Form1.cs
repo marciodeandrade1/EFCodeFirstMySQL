@@ -16,5 +16,24 @@ namespace EFCodeFirstMySQL
                 dataGridView1.DataSource = context.Clientes.ToList();
             }
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            using (var context = new MeuContexto())
+            {
+                var cliente = new Cliente
+                {
+                    Nome = txtNome.Text,
+                    Email = txtEmail.Text,
+                    DataCadastro = DateTime.Now,
+                    Ativo = true
+                };
+                context.Clientes.Add(cliente);
+                context.SaveChanges();
+
+                MessageBox.Show("Cliente salvo com sucesso ");
+
+            }
+        }
     }
 }
