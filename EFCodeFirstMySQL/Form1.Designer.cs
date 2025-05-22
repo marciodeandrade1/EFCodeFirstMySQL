@@ -35,6 +35,7 @@
             label2 = new Label();
             chkAtivo = new CheckBox();
             dataGridView1 = new DataGridView();
+            btnListar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -97,11 +98,22 @@
             dataGridView1.Size = new Size(369, 112);
             dataGridView1.TabIndex = 4;
             // 
+            // btnListar
+            // 
+            btnListar.Location = new Point(352, 103);
+            btnListar.Name = "btnListar";
+            btnListar.Size = new Size(75, 23);
+            btnListar.TabIndex = 5;
+            btnListar.Text = "Listar";
+            btnListar.UseVisualStyleBackColor = true;
+            btnListar.Click += btnListar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(471, 292);
+            Controls.Add(btnListar);
             Controls.Add(dataGridView1);
             Controls.Add(chkAtivo);
             Controls.Add(txtEmail);
@@ -125,5 +137,6 @@
         private Label label2;
         private CheckBox chkAtivo;
         private DataGridView dataGridView1;
+        private Button btnListar;
     }
 }
