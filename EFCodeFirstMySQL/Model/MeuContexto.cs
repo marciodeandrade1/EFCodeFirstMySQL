@@ -9,10 +9,7 @@ namespace EFCodeFirstMySQL.Model
 {
     public class MeuContexto : DbContext
     {
-        public MeuContexto() : base ("name=MeuContexto")
-        {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<MeuContexto>());
-        }
+        public MeuContexto() : base("name=MeuContexto") => Database.SetInitializer(new CreateDatabaseIfNotExists<MeuContexto>());
         public DbSet<Cliente> Clientes { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
